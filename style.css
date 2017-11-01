@@ -1,0 +1,261 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+.container {
+  cursor: pointer;
+  position: relative;
+  width: 300px;
+  height: 600px;
+  background-image: url("300x600_background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid black;
+  z-index: 0;
+  overflow: hidden; }
+
+.flag {
+  width: 118px;
+  height: 90px;
+  display: flex;
+  text-align: center;
+  background-image: url("300x600_flag.png");
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  align-items: center;
+  font-size: 16px; }
+
+.first_text_container {
+  display: block;
+  width: 190px;
+  line-height: 1.4;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 135px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  color: white;
+  font-family: sans-serif;
+  font-weight: 100;
+  align-items: center;
+  font-size: 22px; }
+
+.kpn_text {
+  width: 190px;
+  line-height: 1.4;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 135px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  color: white;
+  font-family: sans-serif;
+  font-weight: 300;
+  align-items: center;
+  font-size: 22px; }
+
+#first_lt {
+  width: 190px;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 205px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  color: white;
+  font-family: sans-serif;
+  font-weight: 100;
+  align-items: center;
+  font-size: 1em; }
+
+#second_lt {
+  width: 190px;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 255px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  color: white;
+  font-family: sans-serif;
+  font-weight: 100;
+  align-items: center;
+  font-size: 1em; }
+
+#first_cb {
+  margin-right: 5px;
+  border: 1px solid white;
+  min-width: 12px;
+  min-height: 12px;
+  max-width: 12px;
+  max-height: 12px;
+  align-items: center;
+  padding: 0;
+  background-image: url("checked.png");
+  background-position: center;
+  background-size: 0;
+  background-repeat: no-repeat; }
+
+#second_cb {
+  margin-right: 5px;
+  border: 1px solid white;
+  min-width: 12px;
+  min-height: 12px;
+  max-width: 12px;
+  max-height: 12px;
+  align-items: center;
+  padding: 0;
+  background-image: url("checked.png");
+  background-position: center;
+  background-size: 0;
+  background-repeat: no-repeat; }
+
+.kpn_text::after {
+  content: '';
+  margin: 3px 0;
+  display: block;
+  width: 88px;
+  height: 1px;
+  background: white; }
+
+.kpn_last_text {
+  width: 190px;
+  line-height: 1.4;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 135px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  color: white;
+  font-family: sans-serif;
+  font-weight: 100;
+  align-items: center;
+  font-size: 22px; }
+
+#first_last_lt {
+  width: 190px;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 170px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  color: white;
+  font-family: sans-serif;
+  font-weight: 100;
+  align-items: center;
+  font-size: 1em; }
+
+#second_last_lt {
+  width: 190px;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 190px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  color: white;
+  font-family: sans-serif;
+  font-weight: 100;
+  align-items: center;
+  font-size: 1em; }
+
+#second_last_lt::after {
+  content: '';
+  margin: 3px 0;
+  display: block;
+  width: 88px;
+  height: 1px;
+  background: white; }
+
+.price_block {
+  width: 190px;
+  text-align: left;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 220px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  color: white;
+  font-family: sans-serif;
+  font-weight: 100;
+  align-items: center;
+  font-size: 1em; }
+  .price_block #oldprice {
+    text-decoration: line-through; }
+  .price_block #newprice {
+    font-size: 22px;
+    font-weight: bold; }
+    .price_block #newprice span {
+      font-size: 12px; }
+
+.logo_internet {
+  width: 200px;
+  height: 112px;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 325px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  align-items: center;
+  font-size: 1em; }
+  .logo_internet img {
+    width: 200px;
+    height: 112px; }
+
+.button {
+  background-color: #09f;
+  border-radius: 16px;
+  width: 145px;
+  text-align: center;
+  line-height: 1.5;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 490px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  color: white;
+  font-family: sans-serif;
+  font-weight: 100;
+  align-items: center;
+  font-size: 19px; }
+
+.bottom_logo {
+  margin: 0;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%); }
+
+/*# sourceMappingURL=style.css.map */

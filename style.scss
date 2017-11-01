@@ -1,0 +1,154 @@
+$textWidth: 190px;
+$containerWidth: 300px;
+$lineWidth: 88px;
+
+@mixin animObjects ($top: 0 , $weight: bold , $size: 1em) {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: $top;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  color: white;
+  font-family: sans-serif;
+  font-weight: $weight;
+  align-items: center;
+  font-size: $size;
+}
+@mixin checkbox () {
+  margin-right: 5px;
+  border: 1px solid white;
+  min-width: 12px;
+  min-height: 12px;
+  max-width: 12px;
+  max-height: 12px;
+  align-items: center;
+  padding: 0;
+  background-image: url("checked.png");
+  background-position: center;
+  background-size: 0;
+  background-repeat: no-repeat;
+}
+@mixin lineAfter {
+  content: '';
+  margin: 3px 0;
+  display: block;
+  width: $lineWidth;
+  height: 1px;
+  background: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  cursor: pointer;
+  position: relative;
+  width: $containerWidth;
+  height: 600px;
+  background-image: url("300x600_background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid black;
+  z-index: 0;
+  overflow: hidden;
+}
+.flag {
+  width: 118px;
+  height: 90px;
+  display: flex;
+  text-align: center;
+  background-image: url("300x600_flag.png");
+  @include animObjects(0, bold , 16px);
+}
+.first_text_container {
+  display: block;
+  width: $textWidth;
+  line-height: 1.4;
+  @include animObjects(135px , 100 , 22px)
+
+}
+.kpn_text {
+  width: $textWidth;
+  line-height: 1.4;
+  @include animObjects(135px , 300 , 22px)
+}
+#first_lt {
+  width: $textWidth;
+  display: flex;
+  flex-direction: row;
+  @include animObjects(205px, 100)
+}
+#second_lt {
+  width: $textWidth;
+  display: flex;
+  flex-direction: row;
+  @include animObjects(255px ,100);
+}
+
+#first_cb {
+  @include checkbox ();
+}
+#second_cb {
+  @include checkbox ();
+}
+.kpn_text::after {
+   @include lineAfter ()
+ }
+.kpn_last_text {
+  width: $textWidth;
+  line-height: 1.4;
+  @include animObjects(135px , 100 , 22px);
+}
+#first_last_lt {
+  width: $textWidth;
+  @include animObjects(170px , 100);
+}
+#second_last_lt {
+  width: $textWidth;
+  @include animObjects(190px , 100);
+}
+#second_last_lt::after {
+  @include lineAfter
+}
+.price_block {
+  width: $textWidth;
+  text-align: left;
+  @include animObjects(220px , 100);
+  #oldprice {
+    text-decoration: line-through;
+  }
+  #newprice {
+    font-size: 22px;
+    font-weight: bold;
+    span {
+      font-size: 12px;
+    }
+  }
+}
+.logo_internet {
+  width: 200px;
+  height: 112px;
+  img {
+    width: 200px;
+    height: 112px;
+  }
+  @include animObjects(325px);
+}
+.button {
+  background-color: #09f;
+  border-radius: 16px;
+  width: 145px;
+  text-align: center;
+  line-height: 1.5;
+  @include animObjects(490px , 100 , 19px)
+}
+.bottom_logo {
+  margin: 0;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
